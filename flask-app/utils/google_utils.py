@@ -1,8 +1,8 @@
 from googleapiclient.discovery import build
 
 def search_zillow(building_name):
-    API_KEY = "AIzaSyCTuzUul8tQi67KDms3IkLody6kqow7rIA"
-    CSE_ID = "007599160388238792469:mibxsazonjm"
+    API_KEY = "API_KEY"
+    CSE_ID = "CSE_ID"
 
     query = building_name + " seattle"
     service = build("customsearch", "v1", developerKey=API_KEY)
