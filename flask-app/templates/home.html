@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Avenir";
+            font-size: 1.1em;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row a {
+            background-color: mediumslateblue;
+            padding: 3%;
+            padding-top: 30%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .row a:hover {
+            background-color: lavender;
+            color: dimgrey;
+        }
+
+        .top-row {
+            background-color: mediumslateblue;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .top-row div {
+            padding: 3%;
+            padding-top: 15%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .middle-row {
+            height: 550px;
+            overflow: auto;
+            background-color: lightgrey;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            color: slategrey;
+        }
+
+        .middle-row div {
+            padding: 3%;
+            margin: 1%;
+            text-align: left;
+            transition: background-color 1s;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .col-3 {
+            margin: 5px;
+            width: 48%;
+        }
+
+        .col-4 {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 300%;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            font-size: x-large;
+        }
+
+        .button {
+            background-color: #1277e1;
+            border-radius: 7px;
+            background-size: 100% auto;
+            padding: 5px;
+        }
+
+         a:link {
+             color: white;
+          text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+          text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+          text-decoration: none;
+        }
+
+        a:active {
+            color: white;
+          text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-row">
+        <div class="col-4">
+            <h1 class="title">Housing Aggregator</h1>
+            <h1>A Project by <a href="aboutme.html">Anastasia Spangler</a></h1>
+        </div>
+    </div>
+    <div  class="middle-row">
+        <div class="col-4">
+            <p>Refresh this page for 10 new units.</p>
+            {% for unit in data %}
+                <div class="card">
+                    <table>
+                        <tr>
+                            <td>{{ unit.building_name }}</td>
+                            <td></td>
+                            <td style="text-align: right">${{ unit.rent }}</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: large">{{ unit.neighborhood }}</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{{ unit.beds }} | {{ unit.baths }} | {{ unit.footage }} sq.ft</td>
+                            <td></td>
+                            <td style="color: white">
+                                <a class="button" href="{{ unit.link }}">
+                                    Check Zillow
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <a href="metrics.html" class="col-3">
+            <div><span>Metrics</span></div>
+        </a>
+        <a href="info.html", class="col-3">
+            <div><span>More Info</span></div>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metrics</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Avenir";
+            font-size: 1.1em;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row div {
+            background-color: mediumslateblue;
+            padding: 3%;
+            padding-top: 10%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .row a:hover {
+            background-color: lavender;
+            color: dimgrey;
+        }
+
+        .top-row {
+            background-color: mediumslateblue;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .top-row div {
+            padding: 3%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .middle-row {
+            height: 250px;
+            overflow: auto;
+            background-color: lightgrey;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .middle-row div {
+            padding: 3%;
+            margin: 1%;
+            text-align: left;
+            color: slategrey;
+            transition: background-color 1s;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .col-3 {
+            margin: 5px;
+            width: 48%;
+        }
+
+        .col-4 {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 300%;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        table, th, td {
+            font-size: x-large;
+            padding: 15px;
+            width: 90%;
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-row">
+        <div class="col-4">
+            <h1 class="title">Metrics</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h3>GIS Data</h3><br>
+            <table>
+                <tr>
+                    <td>Num buildings, >10 units</td>
+                    <td>3681</td>
+                </tr>
+                <tr>
+                    <td>Num buildings, in sample</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Num units, in sample</td>
+                    <td>80633</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-3">
+            <h3>Proof of Concept</h3><br>
+            <table>
+                <tr>
+                    <td>Num buildings, scraped</td>
+                    <td>57</td>
+                </tr>
+                <tr>
+                    <td>Num units, scraped</td>
+                    <td>1831</td>
+                </tr>
+                <tr>
+                    <td>Num buildings, with websites</td>
+                    <td>465</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h3>Affordable Housing</h3><br>
+            <table>
+                <tr>
+                    <td>Affordable Housing Units, in Seattle</td>
+                    <td>17,667</td>
+                </tr>
+                <tr>
+                    <td>Affordable Housing Buildings, on Zillow</td>
+                    <td>8</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-3">
+            Affordable housing units on Zillow estimated by filtering on "income-restricted" option.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

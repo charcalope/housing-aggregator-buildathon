@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Avenir";
+            font-size: 1.1em;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row div {
+            background-color: mediumslateblue;
+            padding: 3%;
+            padding-top: 10%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .row a:hover {
+            background-color: lavender;
+            color: dimgrey;
+        }
+
+        .top-row {
+            background-color: mediumslateblue;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .top-row div {
+            padding: 3%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .middle-row {
+            height: 250px;
+            overflow: auto;
+            background-color: lightgrey;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .middle-row div {
+            padding: 3%;
+            margin: 1%;
+            text-align: left;
+            color: slategrey;
+            transition: background-color 1s;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .col-3 {
+            margin: 5px;
+            width: 48%;
+        }
+
+        .col-4 {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 300%;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        table, th, td {
+            text-align: center;
+            font-size: x-large;
+            padding: 15px;
+            width: 90%;
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-row">
+        <div class="col-4">
+            <h1 class="title">More Information</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>The Stack</h3><br>
+            <table>
+                <th>
+                    Technology
+                </th>
+                <th>
+                    Output
+                </th>
+                <tr>
+                    <td>Seattle GIS</td>
+                    <td>Address</td>
+                </tr>
+                <tr>
+                    <td>Azure</td>
+                    <td>Official Website</td>
+                </tr>
+                <tr>
+                    <td>Google Search</td>
+                    <td>Potential Website</td>
+                </tr>
+                <tr>
+                    <td>Domain Crawler</td>
+                    <td>Webpages</td>
+                </tr>
+                <tr>
+                    <td>Floorplan Visual Classifier</td>
+                    <td>Page Classification</td>
+                </tr>
+                <tr>
+                    <td>Scraping Pipeline</td>
+                    <td>Unit Data</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            Hello,  World.
+        </div>
+        <div class="col-3">
+            Hello, world.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

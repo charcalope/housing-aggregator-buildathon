@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Avenir";
+            font-size: 1.1em;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row div {
+            background-color: mediumslateblue;
+            padding: 3%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .top-row {
+            background-color: mediumslateblue;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .top-row div {
+            padding: 3%;
+            text-align: left;
+            color: white;
+            transition: background-color 1s;
+        }
+
+        .middle-row {
+            height: 400px;
+            overflow: auto;
+            background-color: lightgrey;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .middle-row div {
+            padding: 3%;
+            margin: 1%;
+            text-align: left;
+            color: slategrey;
+            transition: background-color 1s;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .col-3 {
+            margin: 5px;
+            width: 48%;
+        }
+
+        .col-4 {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 300%;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .img-col {
+            margin: 5px;
+            width: 48%;
+            height: 350px;
+            background-image: url("{{ url_for('static', filename='me.JPG') }}");
+            background-size: 100% auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-row">
+        <div class="col-4">
+            <h1 class="title">About Me</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="img-col">
+        </div>
+        <div class="col-3">
+            Incoming Computer Science student at Seattle University.
+            Working on NLP for social good at IBM Research.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            Hello, World.
+        </div>
+        <div class="col-3">
+            Hello, World.
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
