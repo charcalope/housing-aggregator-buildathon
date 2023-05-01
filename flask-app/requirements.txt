@@ -1,6 +1,6 @@
 requests==2.24.0
 pandas==1.0.5
-Flask==1.1.2
+Flask==2.3.2
 google-api-core==1.22.0
 google-api-python-client==1.10.0
 google-auth==1.19.2
